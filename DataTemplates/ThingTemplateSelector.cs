@@ -10,7 +10,7 @@ namespace DataTemplates
         private readonly Dictionary<Type, DataTemplate> TemplatesByType;
         private readonly ResourceDictionary Resources;
 
-        public ThingTemplateSelector() : this(Application.Current.Resources)
+        public ThingTemplateSelector() : this(new ThingTemplates())
         {
 
         }
