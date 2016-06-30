@@ -7,7 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <local:MainPageViewModel x:Name="ViewModel"></local:MainPageViewModel>
+    </Page.DataContext>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <ListView ItemsSource="{x:Bind ViewModel.Items}">
+            
+        </ListView>
     </Grid>
 </Page>
