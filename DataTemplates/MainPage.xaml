@@ -10,9 +10,15 @@
     <Page.DataContext>
         <local:MainPageViewModel x:Name="ViewModel"></local:MainPageViewModel>
     </Page.DataContext>
+
+    <Page.Resources>
+        <local:ThingTemplateSelector x:Key="ThingTemplateSelector"></local:ThingTemplateSelector>
+    </Page.Resources>
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView ItemsSource="{x:Bind ViewModel.Items}">
+        <ListView 
+            ItemsSource="{x:Bind ViewModel.Items}"
+            ItemTemplateSelector="{StaticResource ThingTemplateSelector}">
             
         </ListView>
     </Grid>
